@@ -1,0 +1,20 @@
+version: '3.1'
+ 
+services: 
+ 
+  level-2-springboot:
+    image: level-2:latest
+    restart: always
+    container_name: level_2_microservice
+    ports:
+      - 8081:8080
+    working_dir: /tmp
+    depends_on: 
+      - mongo
+ 
+  mongo:
+    image: mongo
+    container_name: mongo
+    ports: 
+      - 27000:27017
+    restart: always
