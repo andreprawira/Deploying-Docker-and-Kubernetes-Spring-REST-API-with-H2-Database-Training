@@ -60,13 +60,13 @@ Creating image and pushing it to ACR and AKS:
 
 You should see the external IP and the port after you execute "kubectl get pods" type the IP and the port and test it with Postman http://<external-ip>:<port>/api/employees/
 
-If you want to test the app locally, run the app and test it using Postman http://localhost:8081/api/employees/
+If you want to test the app locally, run the app and test it using Postman http://localhost:8080/api/employees/
 
-GET ALL method ```http://localhost:8081/api/employees/```
+GET ALL method ```http://localhost:8080/api/employees/```
 
-GET by id method ```http://localhost:8081/api/employees/1```
+GET by id method ```http://localhost:8080/api/employees/1```
 
-POST method ```http://localhost:8081/api/employees/``` and add the request body:
+POST method ```http://localhost:8080/api/employees/``` and add the request body:
 ```
 {
   "id" : "1",
@@ -74,7 +74,7 @@ POST method ```http://localhost:8081/api/employees/``` and add the request body:
   "salary" : "123"
 }
 ```	
-PUT method ```http://localhost:8081/api/employees/1``` and add the body
+PUT method ```http://localhost:8080/api/employees/1``` and add the body
 ```
 {
   "id" : "1",
@@ -82,4 +82,4 @@ PUT method ```http://localhost:8081/api/employees/1``` and add the body
   "salary" : "321"
 }
 ```
-DELETE method ```http://localhost:8081/api/employees/1```
+DELETE method ```http://localhost:8080/api/employees/1```
