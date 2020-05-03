@@ -58,7 +58,7 @@ Creating image and pushing it to ACR and AKS:
 - kubectl get deployment
 - kubectl get pods
 
-You should see the external IP and the port after you execute "kubectl get pods" type the IP and the port and test it with Postman http://<external-ip>:<port>/api/employees/
+You should see the external IP and the port after you execute "kubectl get pods" type the IP and the port and test it with Postman http://external-ip:port/api/employees/
 
 If you want to test the app locally, run the app and test it using Postman http://localhost:8080/api/employees/
 
