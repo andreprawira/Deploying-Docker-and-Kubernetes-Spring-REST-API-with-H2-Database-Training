@@ -31,10 +31,10 @@ spec:
             memory: "128Mi"
             cpu: "500m"
         ports:
-        - containerPort: 80```
-
+        - containerPort: 80
+```
 Service YAML template for people to access the pod in AKS
-
+```
 apiVersion: v1
 kind: Service
 metadata:
@@ -46,7 +46,7 @@ spec:
   - port: 8080
     targetPort: <MUST MATCH containerPort> ex 80
   type: LoadBalancer
-
+```
 
 
 Creating image and pushing it to ACR and AKS: 
@@ -62,24 +62,24 @@ You should see the external IP and the port after you execute "kubectl get pods"
 
 If you want to test the app locally, run the app and test it using Postman http://localhost:8081/api/employees/
 
-GET ALL method http://localhost:8081/api/employees/
+GET ALL method ```http://localhost:8081/api/employees/```
 
-GET by id method http://localhost:8081/api/employees/1
+GET by id method ```http://localhost:8081/api/employees/1```
 
 POST request body:
-
+```
 {
-	"id" : "1",
-	"name" : "nyadog",
-	"salary" : "123"
-	}
-	
-PUT method http://localhost:8081/api/employees/1 and add the body
-
+  "id" : "1",
+  "name" : "nyadog",
+  "salary" : "123"
+}
+```	
+PUT method ```http://localhost:8081/api/employees/1``` and add the body
+```
 {
-	"id" : "1",
-	"name" : "nyanya",
-	"salary" : "321"
-	}
-
-DELETE method http://localhost:8081/api/employees/1
+  "id" : "1",
+  "name" : "nyanya",
+  "salary" : "321"
+}
+```
+DELETE method ```http://localhost:8081/api/employees/1```
