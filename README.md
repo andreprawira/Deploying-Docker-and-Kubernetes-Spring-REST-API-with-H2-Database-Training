@@ -10,7 +10,7 @@ Login:
 
 Create deployment.yml and service.yml for Azure Kubernetes Service
 
-apiVersion: apps/v1
+```apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: <MY-DEPLOYMENT>
@@ -31,7 +31,7 @@ spec:
             memory: "128Mi"
             cpu: "500m"
         ports:
-        - containerPort: 80
+        - containerPort: 80```
 
 Service YAML template for people to access the pod in AKS
 
