@@ -53,7 +53,7 @@ Creating image and pushing it to ACR and AKS:
 
 - docker build -t <image-name:tag> .
 - docker tag <image-name:tag> <login-server/reponame:tag> 
-- docker push yashmicroregistry.azurecr.io/andre-helloaspnetcore:v1
+- docker push <login-server/reponame:tag>
 - kubectl apply -f .\<deployment-file.yml>
 - kubectl get deployment
 - kubectl get pods
