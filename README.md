@@ -66,7 +66,7 @@ GET ALL method ```http://localhost:8081/api/employees/```
 
 GET by id method ```http://localhost:8081/api/employees/1```
 
-POST request body:
+POST method ```http://localhost:8081/api/employees/``` and add the request body:
 ```
 {
   "id" : "1",
