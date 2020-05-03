@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-sync-deployment
+spec:
+  selector:
+    matchLabels:
+      app: spring-sync-pod
+  template:
+    metadata:
+      labels:
+        app: spring-sync-pod
+    spec:
+      containers:
+      - name: spring-sync-container
+        image: yashmicroregistry.azurecr.io/spring-sync:v1
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80

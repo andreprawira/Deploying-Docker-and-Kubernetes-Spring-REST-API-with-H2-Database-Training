@@ -5,4 +5,4 @@ services:
     image: spring-sync-
     build: .
     ports:
-      - 8081
+      - 8080

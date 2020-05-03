@@ -4,7 +4,7 @@ VOLUME /tmp
 ARG JAVA_OPTS
 ENV JAVA_OPTS=$JAVA_OPTS
 ADD spring-sync-ms.jar spring-sync-ms.jar
-EXPOSE 8081
+EXPOSE 8080
 ENTRYPOINT exec java $JAVA_OPTS -jar spring-sync-ms.jar
 # For Spring-Boot project, use the entrypoint below to reduce Tomcat startup time.
 #ENTRYPOINT exec java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar spring-sync-.jar
