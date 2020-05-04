@@ -1,5 +1,6 @@
 # Spring MVC REST API using H2 
 [![Build Status](https://dev.azure.com/onsitedevops/onsitedevops/_apis/build/status/andreprawira%20test%20build%20using%20maven%20apache%20on%20spring%20sync?branchName=master)](https://dev.azure.com/onsitedevops/onsitedevops/_build/latest?definitionId=13&branchName=master)
+
 This Spring Sync REST API uses H2 database, since it uses in-memory database, this API is the best if you want to dockerize it and deploy it in Kubernetes for tutorial. You will need the JAR file and it is located in root. Here are the commands to create an image and push it to Azure Container Registry and deploy it in Azure Kubernetes Service
 
 Login:
