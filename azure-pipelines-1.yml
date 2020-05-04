@@ -9,7 +9,6 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
-container: openjdk  
 
 steps:
 - task: Maven@3
