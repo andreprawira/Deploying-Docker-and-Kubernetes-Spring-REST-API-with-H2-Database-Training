@@ -5,7 +5,9 @@ This Spring Sync REST API uses H2 database it uses in-memory database. Use this 
 Start with creating Docker image and container in your local machine first:
 
 - ```docker build -t test:latest .```
-- ```docker run -it --rm -p 8081:8081 test:latest```
+- ```docker run -it --rm -p 8081:8081 test:latest``` will have Docker running port 8081 
+- ```docker run -it --rm -p 8080:8081 test:latest``` will have Docker running port 8080
+- ```docker run -it --rm -p 80:8081 test:latest``` will have Docker running port 80
 - Open up Postman and try http://localhost:8081/api/employees/
 
 
