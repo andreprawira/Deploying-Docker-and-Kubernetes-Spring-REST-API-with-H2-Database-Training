@@ -2,6 +2,13 @@
 
 This Spring Sync REST API uses H2 database it uses in-memory database. Use this repo to dockerize and deploy it in Kubernetes for tutorial. You will need the JAR file which is located in root. Here are the commands to create an image and push it to Azure Container Registry and deploy it in Azure Kubernetes Service
 
+Start with creating Docker image and container in your local machine first:
+
+```docker build -t test:latest .```
+```docker run -it --rm -p 8081:8081 test:latest```
+http://localhost:8081/api/employees/
+
+
 Login:
 
 - az acr login --name <registry-name>
