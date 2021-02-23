@@ -37,10 +37,10 @@ Push Docker image to Docker Hub
 1. Open cmd
 2. run ```docker build -t api:latest .```
 3. run ```docker login```
-4. run ```docker tag api:latest <your-docker-id>/<docker-repo-name>:<tag-it-with-whatever-name-you-want> 
-Example: docker tag api:latest bigtiddy/microservices-api-training:initial-push
-5. docker push <your-docker-id>/<docker-repo-name>:<tag-it-with-whatever-name-you-want> 
-Example: docker push bigtiddy/microservices-api-training:initial-push
+4. run ```docker tag api:latest <your-docker-id>/<docker-repo-name>:<tag-it-with-whatever-name-you-want>``` 
+Example: ```docker tag api:latest bigtiddy/microservices-api-training:initial-push```
+5. ```docker push <your-docker-id>/<docker-repo-name>:<tag-it-with-whatever-name-you-want>``` 
+Example: ```docker push bigtiddy/microservices-api-training:initial-push```
 
 Login:
 
