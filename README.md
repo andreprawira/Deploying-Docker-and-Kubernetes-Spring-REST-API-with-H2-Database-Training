@@ -6,7 +6,7 @@ Start with creating Docker image and container in your local machine first:
 
 - ```docker build -t api:latest .```
 - ```docker run -it --rm -p 8081:8081 api:latest``` will have Docker running port 8081 
-- ```docker run -it --rm -p 8080:8081 api:latest``` will have Docker running port 8080
+- ```docker run -it --rm -p 8080:8081 api:latest``` will have Docker running port 8080 (8081 is the container to port and 8080 is the Docker host port)
 - ```docker run -it --rm -p 80:8081 api:latest``` will have Docker running port 80
 - Open up Postman and try http://localhost:8081/api/employees/
 
