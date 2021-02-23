@@ -1,15 +1,36 @@
-# Spring MVC REST API using H2 
+# Microservices Api Training
 
 This Spring Sync REST API uses H2 database it uses in-memory database. Use this repo to dockerize and deploy it in Kubernetes for tutorial. You will need the JAR file which is located in root. Here are the commands to create an image and push it to Azure Container Registry and deploy it in Azure Kubernetes Service
 
 Start with creating Docker image and container in your local machine first:
 
-- ```docker build -t test:latest .```
-- ```docker run -it --rm -p 8081:8081 test:latest``` will have Docker running port 8081 
-- ```docker run -it --rm -p 8080:8081 test:latest``` will have Docker running port 8080
-- ```docker run -it --rm -p 80:8081 test:latest``` will have Docker running port 80
+- ```docker build -t api:latest .```
+- ```docker run -it --rm -p 8081:8081 api:latest``` will have Docker running port 8081 
+- ```docker run -it --rm -p 8080:8081 api:latest``` will have Docker running port 8080
+- ```docker run -it --rm -p 80:8081 api:latest``` will have Docker running port 80
 - Open up Postman and try http://localhost:8081/api/employees/
 
+GET ALL method ```http://localhost:8081/api/employees/```
+
+GET by id method ```http://localhost:8081/api/employees/1```
+
+POST method ```http://localhost:8081/api/employees/``` and add the request body:
+```
+{
+  "id" : "1",
+  "name" : "nyadog",
+  "salary" : "123"
+}
+```	
+PUT method ```http://localhost:8081/api/employees/1``` and add the body
+```
+{
+  "id" : "1",
+  "name" : "nyanya",
+  "salary" : "321"
+}
+```
+DELETE method ```http://localhost:8081/api/employees/1```
 
 Login:
 
@@ -72,26 +93,6 @@ You should see the external IP and the port after you execute "kubectl get pods"
 
 If you want to test the app locally, run the app and test it using Postman ```http://localhost:8080/api/employees/```
 
-GET ALL method ```http://localhost:8080/api/employees/```
 
-GET by id method ```http://localhost:8080/api/employees/1```
-
-POST method ```http://localhost:8080/api/employees/``` and add the request body:
-```
-{
-  "id" : "1",
-  "name" : "nyadog",
-  "salary" : "123"
-}
-```	
-PUT method ```http://localhost:8080/api/employees/1``` and add the body
-```
-{
-  "id" : "1",
-  "name" : "nyanya",
-  "salary" : "321"
-}
-```
-DELETE method ```http://localhost:8080/api/employees/1```
 
 
