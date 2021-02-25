@@ -1,4 +1,4 @@
-# Microservices Api Training
+# Dockerized REST API with Spring and H2 Database
 
 This Spring Sync REST API uses H2 database it uses in-memory database. Use this repo to dockerize and deploy it in Kubernetes for tutorial. You will need the JAR file which is located in root. Here are the commands to create an image and push it to Azure Container Registry and deploy it in Azure Kubernetes Service
 
