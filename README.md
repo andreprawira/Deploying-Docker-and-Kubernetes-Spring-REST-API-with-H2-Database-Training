@@ -32,6 +32,14 @@ PUT method ```http://localhost:8081/api/employees/1``` and add the body
 ```
 DELETE method ```http://localhost:8081/api/employees/1```
 
+Push Docker image to Github as a package:
+
+1. Generate Github PAT and tick upload packages
+2. Open cmd
+3. ```docker login -u $GITHUB_USERNAME -p $GITHUB_TOKEN docker.pkg.github.com```
+4. ```docker tag $IMAGE_ID docker.pkg.github.com/<user-name>/<repo-name>/<image-name>:<tag-name>```
+5. ```docker push docker.pkg.github.com/<user-name>/<repo-name>/<image-name>:<tag-name>```
+
 Push Docker image to Docker Hub
 
 1. Open cmd
@@ -45,10 +53,12 @@ Example: ```docker tag api:latest bigtiddy/microservices-api-training:initial-pu
  
 Example: ```docker push bigtiddy/microservices-api-training:initial-push```
 
+Push Docker image to ACR
+
 Login:
 
-- az acr login --name <registry-name>
-- az aks get-credentials --resource-group <resource-group-name> --name <kubernetes-name>
+- ```az acr login --name <registry-name>```
+- ```az aks get-credentials --resource-group <resource-group-name> --name <kubernetes-name>```
 
 
 
