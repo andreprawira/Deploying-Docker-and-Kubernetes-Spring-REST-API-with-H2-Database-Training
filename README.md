@@ -9,6 +9,7 @@ Start with creating Docker image and container in your local machine first:
 - ```docker run -it --rm -p 8080:8081 api:latest``` will have Docker running port 8080 (8081 is the container to port and 8080 is the Docker host port)
 - ```docker run -it --rm -p 80:8081 api:latest``` will have Docker running port 80
 - Open up Postman and try http://localhost:8081/api/employees/
+- Remove all docker images locally ```for /F %i in ('docker images -a -q') do docker rmi -f %i```
 
 GET ALL method ```http://localhost:8081/api/employees/```
 
